@@ -93,6 +93,20 @@ export default function Home() {
 
                     <h3>{venture.name}</h3>
                     <p className="venture__body">{venture.blurb}</p>
+
+                    <div className="venture__links">
+                      {venture.links.map((link) => (
+                        <a
+                          key={link.href + link.label}
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {link.label}
+                          <ArrowUpRightIcon />
+                        </a>
+                      ))}
+                    </div>
                   </article>
                 </Reveal>
               ))}
