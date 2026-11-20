@@ -5,7 +5,7 @@ site; the live site itself is plain static files on the Plesk box.
 
 ## Pages
 
-Home, About, Ventures, Capabilities, Leadership, Contact. Ventures are
+Home, About, Ventures, Capabilities, Leadership, Investors, Contact. Ventures are
 defined in `lib/site.ts` — add a venture there and it appears on the
 Ventures page (and in the home feature grid when `featured: true`).
 
@@ -26,7 +26,7 @@ The site builds to a static export — no Node server runs on the box.
 3. Upload the *contents* of `out/` into the docroot
    `/var/www/vhosts/socialnews.xyz/agkfire.com/`, replacing the old
    files. Pages are real URLs: `/`, `/about/`, `/ventures/`,
-   `/capabilities/`, `/leadership/`, `/contact/`.
+   `/capabilities/`, `/leadership/`, `/investors/`, `/contact/`.
    (Or pull the `deploy` branch on the box — it holds the built site
    at its root — and copy it into the same docroot.)
 4. Verify live: homepage plus `/ventures/` (Telugu AI card) load.
