@@ -22,11 +22,13 @@ npm run build    # static export into out/
 The site builds to a static export — no Node server runs on the box.
 
 1. `npm run build` — output lands in `out/`.
-2. Back up the current `index.html` in Plesk File Manager
-   (agkfire.com → httpdocs).
-3. Upload the *contents* of `out/` into httpdocs, replacing the old
+2. Back up the current files in the docroot first.
+3. Upload the *contents* of `out/` into the docroot
+   `/var/www/vhosts/socialnews.xyz/agkfire.com/`, replacing the old
    files. Pages are real URLs: `/`, `/about/`, `/ventures/`,
    `/capabilities/`, `/leadership/`, `/contact/`.
+   (Or pull the `deploy` branch on the box — it holds the built site
+   at its root — and copy it into the same docroot.)
 4. Verify live: homepage plus `/ventures/` (Telugu AI card) load.
 
 Vercel auto-deploy stays OFF (`vercel.json`:
